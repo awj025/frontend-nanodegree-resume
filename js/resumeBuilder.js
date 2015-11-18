@@ -19,21 +19,21 @@ var education = {
             "name": "Eastern University",
             "location": "St. Davids, PA",
             "degree": "Master of Business Administration",
-            "majors": "Economic Development",
+            "major": "Economic Development",
             "dates": 1988
         },
         {
             "name": "Mount Vernon Nazarene University",
             "location": "Mt. Vernon, OH",
             "degree": "Bachelor of Arts",
-            "majors": "Computer Science",
+            "major": "Computer Science",
             "dates": 1985
         },
         {
             "name": "Edgewood Senior High School",
             "location": "Ashtabula, OH",
             "degree": "Diploma",
-            "majors": "College Prep Curriculum",
+            "major": "College Prep Curriculum",
             "dates": 1981
         }
     ],
@@ -216,12 +216,35 @@ function displayWork () {
 			$(".work-entry:last").append(formattedWorkDescription);
 		};
 	};
+
 };
 
 displayWork();
 
 function displayEducation () {
-
+	if (education.schools.length > 0) {
+		for (school in education.schools) {
+			$("#education").append(HTMLschoolStart);	
+			var formattedSchoolName = HTMLschoolName.replace("%data%",education.schools[school].name);
+			$(".education-entry:last").append(formattedSchoolName);
+			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
+			$(".education-entry:last").append(formattedSchoolLocation);
+			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",education.schools[school].degree);
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
+			var formattedSchoolDegreeMajor = formattedSchoolDegree + formattedSchoolMajor;
+			$(".education-entry:last").append(formattedSchoolDegreeMajor);
+			var formattedSchoolDates = HTMLschoolDates.replace("%data%",education.schools[school].dates);
+			$(".education-entry:last").append(formattedSchoolDates);
+		}
+	}
+	if (work.onlineCourses.length > 0) {
+		for (course in work.onlineCourses) {
+			var FormattedOnlineCoursesHdr = HTMLOnlineClasses;
+			$("#education").append(FormattedOnlineCoursesHdr);
+			var FormattedCourseTitle = HTMLOnlineTitle.replace("%data%",work.onlineCourses[course].title);
+			$("#education").append(FormattedCourseTitle);
+		}
+	}
 };
 
 displayEducation ();
