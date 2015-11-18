@@ -222,10 +222,20 @@ function displayWork () {
 displayWork();
 
 function displayProject () {
+	if (projects.projects.length > 0) {
+		$("#projects").append(HTMLprojectStart);
+		for (proj in projects.projects) {
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%",projects.projects[proj].title);
+			$(".project-entry:last").append(formattedProjectTitle);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%",projects.projects[proj].dates);
+			$(".project-entry:last").append(formattedProjectDates);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
+			$(".project-entry:last").append(formattedProjectDescription);
+		};
+	};
+};
 
-}
-
-displayProject ();
+displayProject ();  
 
 function displayEducation () {
 	if (education.schools.length > 0) {
@@ -241,8 +251,8 @@ function displayEducation () {
 			$(".education-entry:last").append(formattedSchoolDegreeMajor);
 			var formattedSchoolDates = HTMLschoolDates.replace("%data%",education.schools[school].dates);
 			$(".education-entry:last").append(formattedSchoolDates);
-		}
-	}
+		};
+	};
 	if (work.onlineCourses.length > 0) {
 		var FormattedOnlineCoursesHdr = HTMLonlineClasses;
 		$("#education").append(FormattedOnlineCoursesHdr);
@@ -255,8 +265,8 @@ function displayEducation () {
 			$("#education").append(FormattedCourseDates);			
 			var FormattedCourseURL = HTMLonlineURL.replace("%data%",work.onlineCourses[course].url);
 			$("#education").append(FormattedCourseURL);		
-		}
-	}
+		};
+	};
 };
 
 displayEducation ();
