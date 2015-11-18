@@ -179,14 +179,17 @@ var projects = {
     ]
 }
 
+// var formattedWelcomeMessage = HTMLcontactGeneric.replace("%data%",bio.welcomeMessage);
+// $("#header").append(formattedWelcomeMessage);
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 $("#header").append(formattedName);
+
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 $("#header").append(formattedRole);
 
 if (bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
+	$("#skills").append(HTMLskillsStart);
 	var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
 	$("#skills").append(formattedSkill);
 	formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
@@ -198,7 +201,7 @@ if (bio.skills.length > 0) {
 };
 
 function displayWork () {
-	{if (work.jobs.length > 0) {
+	if (work.jobs.length > 0) {
 		for (job in work.jobs) {
 			$("#workExperience").append(HTMLworkStart);
 			var formattedWorkEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
@@ -216,3 +219,9 @@ function displayWork () {
 };
 
 displayWork();
+
+function displayEducation () {
+
+};
+
+displayEducation ();
