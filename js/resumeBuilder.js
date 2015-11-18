@@ -136,25 +136,25 @@ var work = {
         {
             "title": "JavaScript Basics",
             "school": "Udacity",
-            "dates": 2015,
+            "dates": "2015",
             "url": "http://www.udacity.com/course/ud804"
         },  
         {
             "title": "Intro to HTML and CSS",
             "school": "Udacity",
-            "dates": 2015,
+            "dates": "2015",
             "url": "http://www.udacity.com/course/ud304"
         }, 
         {
             "title": "Responsive Web Design Fundamentals",
             "school": "Udacity",
-            "dates": 2015,
+            "dates": "2015",
             "url": "http://www.udacity.com/course/ud893"
         }, 
         {
             "title": "Responsive Images",
             "school": "Udacity",
-            "dates": 2015,
+            "dates": "2015",
             "url": "http://www.udacity.com/course/ud893"
         }      
     ]
@@ -221,6 +221,12 @@ function displayWork () {
 
 displayWork();
 
+function displayProject () {
+
+}
+
+displayProject ();
+
 function displayEducation () {
 	if (education.schools.length > 0) {
 		for (school in education.schools) {
@@ -238,11 +244,17 @@ function displayEducation () {
 		}
 	}
 	if (work.onlineCourses.length > 0) {
+		var FormattedOnlineCoursesHdr = HTMLonlineClasses;
+		$("#education").append(FormattedOnlineCoursesHdr);
 		for (course in work.onlineCourses) {
-			var FormattedOnlineCoursesHdr = HTMLOnlineClasses;
-			$("#education").append(FormattedOnlineCoursesHdr);
-			var FormattedCourseTitle = HTMLOnlineTitle.replace("%data%",work.onlineCourses[course].title);
+			var FormattedCourseTitle = HTMLonlineTitle.replace("%data%",work.onlineCourses[course].title);
 			$("#education").append(FormattedCourseTitle);
+			var FormattedCourseSchool = HTMLonlineSchool.replace("%data%",work.onlineCourses[course].school);
+			$("#education").append(FormattedCourseSchool);			
+			var FormattedCourseDates = HTMLonlineDates.replace("%data%",work.onlineCourses[course].dates);
+			$("#education").append(FormattedCourseDates);			
+			var FormattedCourseURL = HTMLonlineURL.replace("%data%",work.onlineCourses[course].url);
+			$("#education").append(FormattedCourseURL);		
 		}
 	}
 };
