@@ -18,15 +18,18 @@ h6 {
   overflow: auto;
 }
 
+.online-entry,
 .education-entry,
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  margin: 0;
+  margin-top: 10px;
 }
-
+/*  old color  f5a623  */
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #f19c11;
   line-height: 48px;
   display: inline;
 }
@@ -66,50 +69,59 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: #999;
-  line-height: 16px;
-  float: left;
+  line-height: 14px;
+  float: right;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
   color: #999;
-  line-height: 16px;
-  float: right;
+  line-height: 14px;
+  float: left;
 
+}
+
+.online-name {
+  color: #0d6c8a;
+  text-decoration: none;
+  display: block;
+  padding: 0 5%;
 }
 
 p {
   font-size: 14px;
   color: #333;
-  line-height: 21px;
+  line-height: 17px;
+}
+/*  old color value  #1199c3  */
+a {
+  color: #0d6c8a;
+  text-decoration: none;
+  display: block;
+
 }
 
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
 
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  text-align: center;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #f19c11;
   display: none;
 }
-
+/*  old color value #f5ae23  */
 .orange {
-  background-color: #f5ae23;
+  background-color: #f19c11;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #f19c11;
 }
 
 .white-text {
