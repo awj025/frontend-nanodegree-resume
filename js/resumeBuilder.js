@@ -130,33 +130,6 @@ var work = {
             "description": "Directed non-profit housing project in Africa.  Served as Regional Director for Equator Region.",
             "dates": "1988 - 1991"
         }
-
-    ],
-    "onlineCourses": [
-        {
-            "title": "JavaScript Basics",
-            "school": "Udacity",
-            "dates": "2015",
-            "url": "http://www.udacity.com/course/ud804"
-        },  
-        {
-            "title": "Intro to HTML and CSS",
-            "school": "Udacity",
-            "dates": "2015",
-            "url": "http://www.udacity.com/course/ud304"
-        }, 
-        {
-            "title": "Responsive Web Design Fundamentals",
-            "school": "Udacity",
-            "dates": "2015",
-            "url": "http://www.udacity.com/course/ud893"
-        }, 
-        {
-            "title": "Responsive Images",
-            "school": "Udacity",
-            "dates": "2015",
-            "url": "http://www.udacity.com/course/ud893"
-        }      
     ]
 }
 
@@ -165,16 +138,20 @@ var projects = {
         {
             "title": "Sample Project 1",
             "dates": "2014",
-            "description": "This was the best project in the history of Tuesdays during October 2014"
+            "description": "This was the best project in the history of Tuesdays during October 2014",
+            "image": "project1URL"
         },
         {
             "title": "Sample Project 2",
             "dates": "2014",
-            "description": "This was the best project in the history of Wednesdays during October 2014"
-        },        {
+            "description": "This was the best project in the history of Wednesdays during October 2014",
+            "image": "project2URL"
+        },        
+        {
             "title": "Sample Project 3",
             "dates": "2014",
-            "description": "This was the best project in the history of Thursdays during October 2014"
+            "description": "This was the best project in the history of Thursdays during October 2014",
+            "image": "project3URL"
         }
     ]
 }
@@ -210,6 +187,8 @@ function displayBio () {
 		formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
 		$("#skills").append(formattedSkill);
 	};
+
+
 };
 
 displayBio ();
@@ -245,6 +224,8 @@ function displayProjects() {
 			$(".project-entry:last").append(formattedProjectDates);
 			var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
 			$(".project-entry:last").append(formattedProjectDescription);
+			var formattedProjectImage - HTMLprojectImage.replace("%data%",projects.projects[proj].image);
+			#(".project-entry:last").append(formattedProjectImage);
 		};
 	};
 };
@@ -267,17 +248,17 @@ function displayEducation () {
 			$(".education-entry:last").append(formattedSchoolDates);
 		};
 	};
-	if (work.onlineCourses.length > 0) {
+	if (education.onlineCourses.length > 0) {
 		var FormattedOnlineCoursesHdr = HTMLonlineClasses;
 		$("#education").append(FormattedOnlineCoursesHdr);
-		for (course in work.onlineCourses) {
-			var FormattedCourseTitle = HTMLonlineTitle.replace("%data%",work.onlineCourses[course].title);
+		for (course in education.onlineCourses) {
+			var FormattedCourseTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
 			$("#education").append(FormattedCourseTitle);
-			var FormattedCourseSchool = HTMLonlineSchool.replace("%data%",work.onlineCourses[course].school);
+			var FormattedCourseSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
 			$("#education").append(FormattedCourseSchool);			
-			var FormattedCourseDates = HTMLonlineDates.replace("%data%",work.onlineCourses[course].dates);
+			var FormattedCourseDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
 			$("#education").append(FormattedCourseDates);			
-			var FormattedCourseURL = HTMLonlineURL.replace("%data%",work.onlineCourses[course].url);
+			var FormattedCourseURL = HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
 			$("#education").append(FormattedCourseURL);		
 		};
 	};
