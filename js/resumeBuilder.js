@@ -8,7 +8,7 @@ var bio = {
         "twitter": "@awj025",
         "location": "Galloway, OH"
     },
-    "welcomeMessage": "welcome!",
+    "welcomeMessage": "Pride goes before destruction, a haughty spirit before a fall.  - King Solomon",
     "skills": ["singing", "piano playing", "public speaking", "teaching"],
     "BioPic": "images/awj025.jpg"
 }
@@ -224,8 +224,8 @@ function displayProjects() {
 			$(".project-entry:last").append(formattedProjectDates);
 			var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
 			$(".project-entry:last").append(formattedProjectDescription);
-			var formattedProjectImage - HTMLprojectImage.replace("%data%",projects.projects[proj].image);
-			#(".project-entry:last").append(formattedProjectImage);
+			var formattedProjectImage = HTMLprojectImage.replace("%data%",projects.projects[proj].image);
+			$(".project-entry:last").append(formattedProjectImage);
 		};
 	};
 };
