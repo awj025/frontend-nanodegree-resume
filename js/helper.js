@@ -79,7 +79,7 @@ function logClicks(x,y) {
 
   clickLocations.push(
     {
-      x: x,   
+      x: x,
       y: y
     });
 
