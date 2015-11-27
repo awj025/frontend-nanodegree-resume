@@ -60,8 +60,14 @@ var education = {
             "title": "Responsive Images",
             "school": "Udacity",
             "dates": 2015,
-            "url": "http://www.udacity.com/course/ud893"
-        }      
+            "url": "http://www.udacity.com/course/ud882"
+        },      
+        {
+            "title": "Version Control with Git and Github",
+            "school": "Udacity",
+            "dates": 2015,
+            "url": "http://www.udacity.com/course/ud775"
+        }         
     ]
 }
 

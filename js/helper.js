@@ -76,23 +76,22 @@ The next few lines about clicks are for the Collecting Click Locations quiz in L
 clickLocations = [];
 
 function logClicks(x,y) {
+
   clickLocations.push(
     {
-      x: x,
+      x: x,   
       y: y
-    }
-  );
+    });
+
   console.log('x location: ' + x + '; y location: ' + y);
-}
+};
 
 $(document).click(function(loc) {
-  var x = loc.PageX; 
-  var y = loc.PageY;
+    var x = loc.PageX;
+    var y = loc.PageY;
 
-  logClicks(x,y);
+    logClicks(x,y);
 });
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
