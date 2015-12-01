@@ -40,7 +40,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img src="%data%" class="projpic">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<br><a href="#">%data%</a>';
@@ -100,7 +100,6 @@ https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
 
-
 /*
 Start here! initializeMap() is called when page is loaded.
 */
@@ -117,7 +116,6 @@ function initializeMap() {
   appended to #mapDiv in resumeBuilder.js. 
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
 
   /*
   locationFinder() returns an array of every location string from the JSONs

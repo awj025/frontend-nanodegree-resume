@@ -6,9 +6,7 @@ var bio = {
         "email": "awj025@gmail.com",
         "github": "awj025",
         "twitter": "@awj025",
-
         "location": "Galloway, OH"
-
     },
     "welcomeMessage": "Pride goes before destruction, a haughty spirit before a fall.  - King Solomon",
     "skills": ["singing", "piano playing", "public speaking", "teaching"],
@@ -16,13 +14,27 @@ var bio = {
 };
 
 function displayBio () {
-    var formattedName = HTMLheaderName.replace("%data%",bio.name);
-    $("#header").append(formattedName);
-
     var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-    $("#header").append(formattedRole);
+    $("#header").prepend(formattedRole);
 
-    var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+    var formattedName = HTMLheaderName.replace("%data%",bio.name);
+    $("#header").prepend(formattedName);
+
+// Problem displaying contact info... trying codyperry65 approach from discussion forum, 
+//   using moderator Myles' suggestion...
+
+// Appends contact information in the page with the for in loop
+    for (var contact in bio.contacts) {
+        var formattedContact = HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]);
+
+        $(formattedContact).appendTo("#topContacts, #footerContacts");
+    }
+
+//end of codyperry65 approach
+
+/*  awj025's original contacts display approach
+
+   var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
     $("#header").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
     $("#header").append(formattedEmail);    
@@ -32,6 +44,9 @@ function displayBio () {
     $("#header").append(formattedGithub); 
     var formattedBioLocation = HTMLlocation.replace("%data%",bio.contacts.location);
     $("#header").append(formattedBioLocation); 
+    
+    */
+
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
     $("#header").append(formattedWelcomeMessage); 
 
@@ -204,13 +219,13 @@ var work = {
             "description": "Customized and supported accounting systems in small manufacturing firms.",
             "dates": "1992 - 1994"
         },
-        {
+/*          {  Commented this job out - map apparently has a problem mapping Mbandaka...
             "employer":  "Habitat for Humanity International",
-            "location": "Mbandaka, Democratic Republic of the Congo",
+            "location": "Mbandaka, Democratic Republic of the Congo, Africa",
             "title": "International Partner",
             "description": "Directed non-profit housing project in Africa.  Served as Regional Director for Equator Region.",
             "dates": "1988 - 1991"
-        }
+        }  */
     ]
 };
 
