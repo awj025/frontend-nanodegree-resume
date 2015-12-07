@@ -32,10 +32,11 @@ h6 {
     margin-top: 10px;
 }
 
-/*  old color  f5a623  */
+/*  original color was #f5a623, then used #f19c11, but it wasn't recognized as a change.  Now it's green. */
+
 h1 {
     font-size: 40px;
-    color: #f19c11;
+    color: #059a1f;
     line-height: 48px;
     display: inline;
 }
@@ -113,16 +114,16 @@ a {
 }
 
 #skills-h3 {
-    color: #f19c11;
+    color: #059a1f;
     display: none;
 }
 /*  old color value #f5ae23  */
 .orange {
-    background-color: #f19c11;
+    background-color: #059a1f;
 }
 
 .orange-text {
-    color: #f19c11;
+    color: #059a1f;
 }
 
 .white-text {
