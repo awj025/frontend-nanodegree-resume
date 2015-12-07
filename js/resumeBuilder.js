@@ -65,7 +65,7 @@ var bio = {
             $("#skills").append(formattedSkill);
         }
     }
-}
+};
 
 bio.display();
 
@@ -163,7 +163,7 @@ var education = {
             }
         }
     }
-}
+};
 
 education.display();
 
@@ -252,7 +252,7 @@ var work = {
             }
         }
     }
-}
+};
 
 work.display();
 
@@ -294,7 +294,7 @@ var projects = {
     		}
     	}
     }
-}
+};
 
 projects.display();
 
