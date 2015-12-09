@@ -85,9 +85,10 @@ h5 {
     line-height: 14px;
     float: left;
 }
+//  old color was #0d6c8a
 
 .online-name {
-    color: #0d6c8a;
+    color: #059a1f;
     text-decoration: none;
     display: block;
     padding: 0 5%;
@@ -100,7 +101,8 @@ p {
 }
 /*  old color value  #1199c3  */
 a {
-    color: #0d6c8a;
+    font-size: 16px;
+    color: #059a1f;
     text-decoration: none;
     display: block;
 }

@@ -234,8 +234,8 @@ var projects = {
     }, {
         "title": "Nephew Prefers Finland to Florida",
         "dates": "2015",
-        "description": "Now He's Always Wearing Gloves",
-        "images": ["images/JC in Finland 02.jpg", "images/JC in Finland 06.jpg", "images/JC in Finland 04.jpg"]
+        "description": "Now He Wears Gloves and Shoots at the Goalie",
+        "images": ["images/JC in Finland 02.jpg", "images/JC in Finland 06.jpg", "images/JC in Finland 05.jpg", "images/JC in Finland 04.jpg"]
     }],
     "display": function () {
         if (projects.projects.length > 0) {
